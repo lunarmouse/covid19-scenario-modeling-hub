@@ -1,7 +1,7 @@
 team_name: UNCC
 model_name: HierBin
 model_abbr: UNCC-hierbin
-model_version: 2021-06-08
+model_version: 2021-07-13
 model_contributors: Shi Chen (UNC Charlotte Department of Public Health Sciences & School of Data Science) <schen56@uncc.edu>, Rajib Paul (UNC Charlotte Department of Public Health Sciences and School of Data Science) <rajib.paul@uncc.edu>, Daniel Janies (UNC Charlotte Department of Bioinformatics and Genomics) <djanies@uncc.edu>, Jean-Claude Thill (UNC Charlotte Department of Geography and Earth Sciences and School of Data Science) <jean-claude.thill@uncc.edu>
 website_url: NA
 license: cc-by-4.0
