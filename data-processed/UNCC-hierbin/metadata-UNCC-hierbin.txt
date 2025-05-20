@@ -1,25 +1,25 @@
 team_name: UNCC
 model_name: HierBin
 model_abbr: UNCC-hierbin
-model_version: 2023-04-16
-model_contributors: Shi Chen (UNC Charlotte Department of Public Health Sciences & School of Data Science) <schen56@uncc.edu>, Rajib Paul (UNC Charlotte Department of Public Health Sciences and School of Data Science) <rajib.paul@uncc.edu>, Daniel Janies (UNC Charlotte Department of Bioinformatics and Genomics) <djanies@uncc.edu>, Jean-Claude Thill (UNC Charlotte Department of Geography and Earth Sciences and School of Data Science) <jean-claude.thill@uncc.edu>
+model_version: 2025-04-27
+model_contributors: Shi Chen (UNC Charlotte Department of Epidemiology & Community Health, and School of Data Science) <schen56@uncc.edu>, Rajib Paul (School of Data Science) <rajib.paul@uncc.edu>, Daniel Janies (UNC Charlotte Department of Bioinformatics and Genomics) <djanies@uncc.edu>
 website_url: NA
 license: cc-by-4.0
-methods: Because of the complexity of socio-epidemiological system of COVID-19, we developed a data-driven, non-mechanistic statistical model to track and characterize and predict the cumulative case in 2023, assuming it follow certain asymptotic curves. In round #17 we choose a hybrid method with weighted average of both shorter and longer fitting period in order to capture both short-term and long-term dynamics of COVID-19 during the transition periods of various dominant Omicron subvariants, where the asymptomtotic behavior is challenging to track with a simple, single curve. We then projected cumulative case based on the developed model which served as the baseline scenario (no external processes such as changes in NPIs, vaccination campaigns including booster shots, new variants,, etc.) at weekly temporal resolution to save computational power (where all previous rounds were run at daily basis). The difference of weekly cumulative case would be the baseline incident case. Then, weekly incident cases number was used to project weekly hospitalization and death based on most recent hospitalization and death rates, respectively. In this round #17, we considered several different temporal forces: long-term seasonality that was estimated from pre-Omicron phases to model the periodicity of cases/hospitalizations/deaths; short-term stochasticity assumed as a random walk with prescribed parameters to introduce system stochasticity; and the underlying dynamics projected from the exponential model. Other important driving factors, such as immune evasiveness and vaccination, were modeled as their respective time-varying parameters on incidence, hospitalizaiton, and death rates in each state.
+methods: Because of the complexity of socio-epidemiological system of COVID-19, we developed a data-driven, non-mechanistic statistical model to track and characterize and predict the cumulative case in 2025, assuming it follow certain asymptotic curves. In round #19 we choose a hybrid method with weighted average of both shorter and longer fitting period in order to capture both short-term and long-term dynamics of COVID-19. We projected both hospitalization and death based on the 2023-2025 data as the baseline scenario (no external processes such as changes in NPIs, vaccination campaigns including booster shots, new variants,, etc.) at weekly temporal resolution. We considered several different temporal forces: annually, biannually, and quarterly, as well as weekly fluctuations. Other important driving factors, such as immune evasiveness and vaccination, were modeled as their respective time-varying parameters on incidence, hospitalizaiton, and death rates in each state.
 
 contact_tracing: NA
 testing: NA
 vaccine_efficacy_transmission: Efficacy of vaccine to reduce symptoms was modeled as scenario guideline.
 vaccine_efficacy_delay: NA
 vaccine_hesitancy: Vaccine hesitancy was implicitly modeled as an asympototic curve of vaccination rate in each state.
-vaccine_immunity_duration: 6-10 months, exponential decay. 
+vaccine_immunity_duration: 4-6 months, exponential decay. 
 natural_immunity_duration: same as vaccine-induced immunity.
 case_fatality_rate: CFR was estimated as a time-varying function (implicitly with vaccination rate) in each state from reported death and case data in 2022-2023.
 infection_fatality_rate: NA
 asymptomatics: NA
-age_groups: All age groups, including 5-12yr (implicitly by data). In addition, age group 65+ was modelded as directed. State-specific 65+ percentages were used to evaluate the overall vaccination effectiveness
+age_groups: All age groups, <65 and 65+ 
 importations: NA for current version.
 confidence_interval_method: Several assumptions were made to address uncertainty, e.g., system stochasticity from random noise, state-level variation in vaccination rate, yearly variability, etc.
-calibration: 2022-2023 cumulative case, hospitalization, and death data by state were used to model and calibrate the initial model. 2020-2022 pre-Omicron incident case data by states were also used to calibrate temporal behavior (i.e., seasonality) of the model.
+calibration: 2023-2025  hospitalization, and death data by state were used to model and calibrate the initial model. 
 spatial_structure: By state.
-data_inputs: JHU case and death data, HHS hospitalization data, NYT vaccination data, KFF population demographic data, etc.
+data_inputs: prescribed by the SMH coordination team.
